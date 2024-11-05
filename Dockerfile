@@ -8,4 +8,4 @@ COPY index.html /usr/share/nginx/html/index.html
 COPY style.css /usr/share/nginx/html/style.css
 
 # Expose port 80 to the Docker host
-EXPOSE 80
+EXPOSE 3000
