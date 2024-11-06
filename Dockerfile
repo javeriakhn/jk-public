@@ -1,11 +1,6 @@
-# Dockerfile
 
-# Use the official Nginx image as a base
-FROM nginx:latest
-
-# Copy static website files to the Nginx directory
-COPY index.html /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/style.css
-
-# Expose port 80 to the Docker host
+FROM python:2.7
+WORKDIR /index.html
+COPY . .
 EXPOSE 3000
+CMD python -m SimpleHTTPServer 3000
